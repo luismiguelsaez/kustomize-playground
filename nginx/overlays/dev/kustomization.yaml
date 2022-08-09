@@ -1,0 +1,24 @@
+resources:
+- ../../base
+
+patchesStrategicMerge:
+- deployment.yaml
+
+namePrefix: dev-
+
+# Images transformer
+images:
+  - name: nginx
+    newName: nginx
+    newTag: 1.21.1-alpine
+
+# Common labels
+commonLabels:
+  environment: dev
+
+configMapGenerator:
+- name: default-configuration
+  files:
+    - nginx.conf
+  literals:
+    - type=default
