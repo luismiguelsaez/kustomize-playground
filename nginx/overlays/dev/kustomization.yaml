@@ -3,6 +3,7 @@ resources:
 
 patchesStrategicMerge:
 - deployment.yaml
+- secret.yaml
 
 namePrefix: dev-
 
