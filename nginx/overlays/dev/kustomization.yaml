@@ -35,7 +35,5 @@ secretGenerator:
 
 generatorOptions:
   disableNameSuffixHash: false
-  labels:
-    kustomize.generated.resource: "true"
-  annotations:
-    avp.kubernetes.io/path: "kv/data/lokalise-main/stage"
+  labels: {}
+  annotations: {}
