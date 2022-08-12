@@ -1,0 +1,23 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: nginx
+  annotations: {}
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name=nginx: nginx
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name=lok: lok
+      ports:
+        - protocol: TCP
+          port: 80
+  egress:
+    - {}

@@ -8,6 +8,7 @@ patchesStrategicMerge:
 - deployment.yaml
 - service.yaml
 - ingress.yaml
+- networkpolicy.yaml
 - secret.yaml
 
 namePrefix: dev-
