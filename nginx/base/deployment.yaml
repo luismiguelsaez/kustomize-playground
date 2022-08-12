@@ -22,7 +22,7 @@ spec:
     spec:
       terminationGracePeriodSeconds: 60
       securityContext:
-        runAsNonRoot: true
+        runAsNonRoot: false
       nodeSelector: {}
       containers:
         - name: nginx
