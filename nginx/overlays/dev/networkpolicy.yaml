@@ -7,15 +7,15 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      app.kubernetes.io/name=nginx: nginx
+      application: nginx
   policyTypes:
     - Ingress
     - Egress
   ingress:
     - from:
-        - namespaceSelector:
+        - podSelector:
             matchLabels:
-              kubernetes.io/metadata.name=lok: lok
+              environment: dev
       ports:
         - protocol: TCP
           port: 80
