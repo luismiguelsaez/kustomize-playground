@@ -4,7 +4,8 @@ kind: Ingress
 metadata:
   name: nginx
   annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/preserve-trailing-slash: "true"
 spec:
   ingressClassName: nginx
   rules:
