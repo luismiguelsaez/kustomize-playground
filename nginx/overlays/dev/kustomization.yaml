@@ -7,7 +7,7 @@ resources:
 patchesStrategicMerge:
 - deployment.yaml
 - service.yaml
-- ingress.yaml
+- ingress-nginx.yaml
 - networkpolicy.yaml
 - secret.yaml
 
