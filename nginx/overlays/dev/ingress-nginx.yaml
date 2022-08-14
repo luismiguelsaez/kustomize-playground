@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: nginx.minikube.cloud
+  - host: nginx.dev.lokalise.cloud
     http:
       paths:
       - path: /
